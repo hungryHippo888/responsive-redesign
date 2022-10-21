@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="script.js"></script>
+	<title>Responsive Redesign</title>
+</head>
+<body>
+	<div class="bodyDiv">
+		<div class="landingPage">
+			<div class="child">
+			<h1 style="font-weight: boldest; color: white;">CSCI 1300: Responsive Redesign</h1>
+			<hr style = "background-color:#8758FF; height:2px;"/>
+			<h2 style="font-size: 24px; color: white;">Redesigning National Collegiate Table Tennis Association Page</h2>
+			</div>
+		</div>
+		<h1>Part 1: Identifying Usability Problems</h1>	
+		<hr style = "background-color:#8758FF; height:1px; width: 50%;"/>
+
+		<div class="container">
+			<div class="row">
+			    <div class="col">
+					<img src="./components/NCTTA.png" class="sciLiImage" alt="Annotated sketch of Sci Li Charging Booth">
+				</div>
+			    <div class="col p1">
+			    	<ol>
+			    	<h2>Why NCTTA website?</h2>
+					<hr style = "background-color:#5CB8E4; height:1px;"/>
+			    	I am a member of the table tennis team. From finding tournament information to reading about the qualification rules, I chose to redesign the National Collegiate Table Tennis Association (NCTTA) website because of how difficult I find using the current website. 
+				</ol>
+			    	<ol class="list">
+						<h2 style="text-align: center;">Usability Issues</h2>	
+						<hr style = "background-color:#5CB8E4; height:1px;"/>
+			    		<li>Lack of headers make the page difficult to follow and take longer to understand. I had a difficult time understanding that below the picture was articles.</li>
+			    		<li>The unevenly distributed white space makes the page feel like it is missing something.</li>
+			    		<li>The Site Map button is not a poorly named button; I am not sure what that button does.</li>
+			    		<li>Recent articles button seems irrelevant, as recent articles are on the page below.</li>
+			    		<li>The website has a 1 -> 2 -> ... at bottom of page; unsure of its use.</li>
+			    		<li>The news layout is unclear due to lack of identifying information.</li>
+			    	</ol>
+			    	<ol class="list" style="text-align: center;">
+						<h2 style="text-align: center;">Accessibility Issues</h2>	
+						<hr style = "background-color:#5CB8E4; height:1px;"/>
+						Expectedly, the website performed poorly on the WAIVE assessment. The website does not have any alt tags specified for its images. This makes the website inaccessible to vision-imparied users. Moreover, the website has a lot of broken links as well.
+			    	</ol> 
+				</div>
+			</div>
+		<h1>Part 2: Visual Redesign</h1>	
+		<hr style = "background-color:#8758FF; height:1px; width: 50%;"/>
+
+		<div class="container">
+	
+		<h2>Lofi and Hifi Prototypes</h2>
+		<hr style = "background-color:#5CB8E4; height:1px; width: 30%;"/>
+		<div class="storyboardParent">
+			<!-- <div class="container"> -->
+			<div>	
+			  <div class="row">
+			    <div class="col">
+			    	<img src="./components/web_lofi.png" class="storyboard" alt="web_lofi">
+			    </div>
+			    <div class="col">
+			    	<img src="./components/web_hifi.png" class="storyboard" alt="web_hifi">	
+			    </div>
+			</div>	
+			<div>	
+			  <div class="row">
+			    <div class="col">
+			    	<img src="./components/phone_lofi.png" class="storyboard" alt="phone_lofi">
+			    </div>
+			    <div class="col">
+			    	<img src="./components/phone_hifi.png" class="storyboard" alt="phone_hifi" style="width: 60% !important;" >	
+			    </div>
+			</div>			
+			<div>	
+			  <div class="row">
+			    <div class="col">
+			    	<img src="./components/ipad_lofi.png" class="storyboard" alt="ipad_lofi">
+			    </div>
+			    <div class="col">
+			    	<img src="./components/ipad_hifi.png" class="storyboard" alt="ipad_hifi" style="width: 60% !important;">	
+			    </div>
+			</div>
+		<h2>Annotated Hifi Prototypes + UI Design</h2>
+		<hr style = "background-color:#5CB8E4; height:1px; width: 60%;"/>
+		<p class="uiMethod"> As shown below, I plan on primarily organizing my page through flexbox, as flex box makes it easy to move when the device size changes. The most difficult part will be aligning the picture within the flexbox with my other flexboxes. I plan on using media queries based on width to determine when I should change the size of my text, shift the news side onto the vertical axis, and when to remove the picture. I have it set where my media query sizes based on with are at 1000 and 600 px. I will replace the naviation bar with a hamburger bar at 1000 px for responsiveness with phones and tablets. Moreover, I plan on using the z-index css property to overlay the text onto the front screen image. In order to incorporate the background, I plan on using a linear gradient that is rotated. The font size will be specified almost entirely with em. To make the site more interactive, I will add zoom on hover elements to the news articles as well as the navigation bar items. Finally, for the footer, I plan on using bootstrap to create the table structure. 
+		</p>
+			<div>	
+			  <div class="row">
+			    <div class="col">
+			    	<img src="./components/ipad_hifi_annotated.jpg" class="storyboardJpg" alt="ui guide">
+			    </div>
+			    <div class="col">
+			    	<img src="./components/phone_hifi_annotated.jpg" class="storyboardJpg" alt="web_hifi annotated">	
+			    </div>
+			</div>	
+			<div>	
+			<div>	
+			  <div class="row">
+			    <div class="col">
+			    	<img src="./components/web_hifi_annotated.jpg" class="storyboard" id="special" alt="slide 15 storyboard">
+			    </div>
+			</div>
+		</div>
+			<div>	
+		</div>
+	</div>
+		<img src="./components/uiguide.png" class="storyboard" alt="ui guide">
+		<h2>The link to my final project is <a href="https://hungryhippo888.github.io/NCTTA-redesign/" style="color:#5CB8E4; font-weight: bold;">here</a>. <h2>
+
+	    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
